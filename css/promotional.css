@@ -1,0 +1,104 @@
+body {
+	background-color: #f0f2f5;
+}
+.promotional {
+	padding: 10px;
+}
+.promotional form {
+	position: relative;
+	width: 600px;
+	margin: auto;
+	margin-top: 15px;
+	padding: 20px;
+	border: 1px solid #dddddd;
+	border-radius: 10px;
+	background-color: #ffffff;
+}
+.promotional-form-header {
+	color: #151515;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 10px;
+}
+.promotional-form-body select {
+	cursor: pointer;
+	color: #151515;
+	display: block;
+	appearance: none;
+	width: calc(100% - 18.5px);
+	padding: 10px;
+	margin: 10px;
+	border: 1px solid #dddddd;
+	border-bottom: 2px solid #dddddd;
+	border-radius: 5px;
+	outline: none;
+}
+.promotional-form-body .input-icon {
+	color: #151515;
+	position: absolute;
+	display: block;
+	padding: 10px;
+	margin-left: 10px;
+}
+.promotional-form-body input {
+	color: #151515;
+	text-indent: 25px;
+	display: block;
+	width: calc(100% - 40px);
+	padding: 10px;
+	margin: 10px;
+	border: 1px solid #dddddd;
+	border-bottom: 2px solid #dddddd;
+	border-radius: 5px;
+	outline: none;
+}
+.promotional-form-body input:disabled {
+	text-indent: 0px;
+}
+.promotional-form-body input[type="date"] {
+	text-indent: 5px;
+}
+.promotional-form-body input[type="date"]::before {
+	content: "Birthday";
+	font-family: Arial;
+	color: #757575;
+	font-size: 13px;
+}
+.required-icon {
+	color: #df2c14;
+	font-size: 20px;
+	font-style: normal;
+	position: absolute;
+	margin-top: -45px;
+	margin-right: 32px;
+	padding: 10px;
+	right: 0;
+}
+.promotional-form-body button {
+	cursor: pointer;
+	color: #ffffff;
+	width: calc(100% - 20px);
+	padding: 10px;
+	margin: 10px;
+	border: none;
+	border-radius: 5px;
+	background-color: #df2c14;
+}
+
+
+/* PAGE NUMBER SELECT */
+.page-number {
+	text-align: center;
+}
+.page-number select {
+	cursor: pointer;
+	text-align: center;
+	padding: 3px;
+	outline: none;
+	appearance: none;
+	border: none;
+	border-bottom: 1px solid #dddddd;
+}
+.page-number select:hover {
+	background-color: #f2f2f2;
+}

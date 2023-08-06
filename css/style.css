@@ -1,0 +1,490 @@
+@font-face {
+	font-family: "Bahnschrift";
+	src: url("font/bahnschrift.ttf") format("truetype");
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	overflow-y: scroll;
+	background-color: #f0f2f5;
+}
+input:focus {
+	outline: 3px solid #b3d7fe;
+}
+
+/* MODEL */
+.modal {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 2;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	opacity: 0;
+	pointer-events: none;
+	background-color: rgba(0, 0, 0, 0.25);
+}
+.modal-content {
+	width: 500px;
+	border-radius: 5px;
+	background-color: #ffffff;
+	box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.1);
+}
+.modal-content-header {
+	color: #323232;
+	font-family: "Bahnschrift", sans-serif;
+	font-weight: bold;
+	padding: 20px;
+	border-bottom: 1px solid #dddddd;
+}
+.modal-content-body {
+	padding: 20px;
+	border-bottom: 1px solid #dddddd;
+}
+.modal-content-body-header {
+	font-family: "Bahnschrift", sans-serif;
+	color: #323232;
+	font-weight: bold;
+	margin-bottom: 10px;
+	display: block;
+}
+.modal-content-body-header::after {
+	content: "";
+	display: block;
+}
+.modal-content-footer {
+	text-align: right;
+	padding: 20px;
+}
+.modal-content-footer button {
+	cursor: pointer;
+	color: #ffffff;
+	padding: 8px 10px;
+	border: none;
+	border-radius: 5px;
+	background-color: #ef5350;
+}
+
+
+/* LOADER */
+.loader {
+	cursor: no-drop;
+	height: 70px;
+	width: 70px;
+	padding: 5px;
+	position: fixed;
+	border-radius: 50%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 3;
+	display: none;
+	background-color: #ffffff;
+	box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+.loader img {
+	height: 60px;
+	padding: 5px;
+}
+.loader::before {
+	content: "";
+	position: absolute;
+	height: 60px;
+	width: 60px;
+	border: 5px solid #ffffff;
+	border-top: 5px solid #df2c14;
+	border-radius: 50%;
+	webkit-animation: spin 1s linear infinite;
+	animation: spin 1s linear infinite;
+}
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/* HEADER */
+.header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 2;
+	background-color: #ffffff;
+	box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.1);
+}
+.menu-bar {
+	cursor: pointer;
+	color: #151515;
+	position: absolute;
+	left: 0;
+	margin: 5px;
+	padding: 15px;
+	border-radius: 5px;
+}
+.menu-bar:hover {
+	background-color: #f2f2f2;
+}
+.navigation {
+	width: calc(1220px - 40px);
+	margin: auto;
+	padding: 20px;
+	overflow: hidden;
+	position: relative;
+}
+.navigation .logo {
+	height: 40px;
+	margin-top: -10px;
+	position: absolute;
+}
+.navigation a:nth-child(2) {
+	margin-left: 50px;
+}
+.navigation a {
+	font-family: "Bahnschrift", sans-serif;
+	cursor: pointer;
+	color: #65676b;
+	font-size: 14px;
+	text-decoration: none;
+	padding: 15px;
+}
+.navigation a:hover {
+	color: #df2c14;
+	border-radius: 5px;
+	background-color: #f2f2f2;
+}
+.navigation a svg {
+	margin-right: 5px;
+}
+.navigation .active {
+	color: #df2c14;
+	font-weight: bold;
+}
+.navigation .active:hover {
+	border-radius: 0;
+	background-color: #ffffff;
+}
+.logout {
+	position: absolute;
+	right: 0;
+	margin-top: -15px;
+}
+.logout:hover {
+	color: #df2c14;
+}
+
+/* SUB NAVIGATION */
+.sub-navigation {
+	position: fixed;
+	top: 59px;
+	left: 0;
+	height: calc(100% - 60px);
+	margin-bottom: 10px;
+	padding-top: 10px;
+	transition: all 0.5s ease;
+	z-index: 1;
+	background-color: #ffffff;
+	box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.1);
+}
+.maximized {
+	width: 300px;
+}
+.minimized {
+	width: 70px;
+}
+.sub-navigation div {
+	padding: 0 10px;
+	overflow: hidden;
+}
+.sub-navigation div a {
+	font-family: "Bahnschrift", sans-serif;
+	cursor: pointer;
+	color: #151515;
+	font-size: 14px;
+	white-space: nowrap;
+	text-decoration: none;
+	padding: 15px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	display: block;
+	border-radius: 5px;
+}
+.sub-navigation div a:hover {
+	color: #df2c14;
+	background-color: #f2f2f2;
+}
+.sub-navigation .active::before,
+.sub-navigation .active:hover::before {
+	content: "";
+	position: absolute;
+	height: 50px;
+	width: 5px;
+	margin-top: 5px;
+	margin-left: -10px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	background-color: #df2c14;
+}
+.sub-navigation .active a {
+	color: #df2c14;
+}
+.sub-navigation div a img {
+	height: 20px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.maximized #application-evaluation a::after {
+	content: "Application for Evaluation";
+	margin-left: 5px;
+}
+.maximized #final-evaluation-result-form a::after {
+	content: "Final Evaluation Result Form";
+	margin-left: 5px;
+}
+.maximized #application-graduation a::after {
+	content: "Application for Graduation";
+	margin-left: 5px;
+}
+.maximized #list-graduates a::after {
+	content: "List of Graduates";
+	margin-left: 5px;
+}
+.maximized #create-diploma a::after {
+	content: "Create Diploma";
+	margin-left: 5px;
+}
+.maximized #promotional a::after {
+	content: "Promotional";
+	margin-left: 5px;
+}
+.maximized #grade-sheet a::after {
+	content: "Grade Sheet";
+	margin-left: 5px;
+}
+.maximized #list-promoted a::after {
+	content: "List of Promoted";
+	margin-left: 5px;
+}
+.maximized #create-sop-diploma a::after {
+	content: "Create Diploma";
+	margin-left: 5px;
+}
+.maximized #dashboard a::after {
+	content: "Dashboard";
+	margin-left: 5px;
+}
+.maximized #subjects a::after {
+	content: "Subjects";
+	margin-left: 5px;
+}
+.maximized #professors a::after {
+	content: "Professors";
+	margin-left: 5px;
+}
+.maximized #heads a::after {
+	content: "Heads";
+	margin-left: 5px;
+}
+.maximized #colleges a::after {
+	content: "Colleges";
+	margin-left: 5px;
+}
+
+/* BODY */
+.main-body-header {
+	margin-top: 69px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	background-color: #ffffff;
+	box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.1);
+}
+.main-body-header a {
+	cursor: pointer;
+	color: #65676b;
+	text-align: center;
+	display: inline-block;
+	padding: 10px;
+	width: 60px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.main-body-header .active,
+.main-body-header .active:hover {
+	color: #df2c14;
+	font-weight: bold;
+	background-color: #ffffff;
+}
+.edit-btn {
+	background-color: #f5b051;
+}
+.delete-btn {
+	background-color: #de6257;
+}
+.search-menu input {
+	padding: 10px;
+	border: 1px solid #dddddd;
+	border-radius: 5px;
+}
+.search-btn {
+	cursor: pointer;
+	color: #ffffff;
+	vertical-align: middle;
+	padding: 10px;
+	border-radius: 5px;
+	background-color: #3176b7;
+}
+
+.paper-report {
+	margin-bottom: 10px;
+}
+.paper-report span {
+	color: #151515;
+	font-size: 14px;
+	margin-right: 10px;
+}
+
+/* CREATE DIPLOMA */
+.upload {
+	color: #65676b;
+	margin-bottom: 10px;
+	padding: 6px;
+	border: 1px solid #f0f0f0;
+	border-radius: 5px;
+	background-color: #ffffff;
+}
+.diploma-type {
+	cursor: pointer;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	outline: none;
+}
+.diploma-type:hover {
+	background-color: #f2f2f2;
+}
+.upload form {
+	display: inline-block;
+}
+input[type="file"] {
+	cursor: pointer;
+	color: #ffffff;
+	padding: 5px;
+	width: 84px;
+	margin-right: 180px;
+	border-radius: 5px;
+}
+input[type="file"]:hover {
+	color: #f2f2f2;
+	background-color: #f2f2f2;
+}
+input[type="file"]:focus {
+	outline: none;
+}
+input::file-selector-button {
+	cursor: pointer;
+	padding: 5px;
+	border: 1px solid #dddddd;
+	border-radius: 5px;
+	background-color: #f9f9f9;
+}
+.excel-file-text {
+	color: #65676b;
+	font-size: 13.1px;
+	position: absolute;
+	max-width: 170px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 11.5px;
+	margin-left: -180px;
+	pointer-events: none;
+}
+.upload-btn,
+.select-btn {
+	color: #65676b;
+	cursor: pointer;
+	font-weight: bold;
+	border: none;
+	outline: none;
+	background-color: transparent;
+}
+.upload-btn:hover,
+.select-btn:hover {
+	text-decoration: underline;
+}
+.select-btn {
+	margin-left: 10px;
+}
+#excel-area {
+	overflow: hidden;
+}
+
+/* LIST OF GRADUATES */
+.list-of-graduates {
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+.list-of-graduates th,
+.list-of-graduates td {
+	padding: 3px;
+	border: 1px solid #000000;
+}
+
+/* LOAD MENU */
+.load-menu {
+	margin-bottom: 10px;
+}
+.load-menu div {
+	display: inline-block;
+	padding: 6px;
+	padding-right: 10px;
+	border-radius: 6px;
+	background-color: #ffffff;
+	box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.1);
+}
+.load-menu div:nth-child(2) {
+	margin-left: 30px;
+}
+.load-menu div:nth-child(2)::before {
+	content: "or";
+	position: absolute;
+	margin-top: 10px;
+	margin-left: -30px;
+}
+.load-menu div:nth-child(2) select {
+	cursor: pointer;
+	padding: 10px;
+	max-width: 170px;
+	border: none;
+	border-radius: 5px;
+	outline: none;
+}
+.load-menu div:nth-child(2) select:hover {
+	background-color: #f2f2f2;
+}
+
+.paper-main-header button {
+	cursor: pointer;
+	color: #65676b;
+	font-size: 12.6px;
+	padding: 5px;
+	border: none;
+	background-color: transparent;
+}
+.paper-main-header button:hover {
+	text-decoration: underline;
+}

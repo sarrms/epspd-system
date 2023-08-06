@@ -1,0 +1,123 @@
+.main-list-promoted {
+	width: 1220px;
+	margin: auto;
+	margin-top: 69px;
+	background-color: #ffffff;
+}
+.list-promoted-header {
+	margin-bottom: 10px;
+}
+.list-promoted-header select {
+	cursor: pointer;
+	padding: 10px;
+	border: 1px solid #dddddd;
+	outline: none;
+}
+.list-promoted-header button,
+.list-promoted-option button {
+	color: #65676b;
+	cursor: pointer;
+	font-size: 12.6px;
+	font-weight: bold;
+	margin-left: 10px;
+	border: none;
+	outline: none;
+	background-color: transparent;
+}
+.list-promoted-header button:hover,
+.list-promoted-option button:hover {
+	text-decoration: underline;
+}
+.list-promoted-option {
+	text-align: right;
+}
+.list-promoted-header span {
+	font-family: Times New Roman;
+	text-align: center;
+	display: block;
+}
+.list-promoted-header span:nth-child(1),
+.list-promoted-header span:nth-child(4) {
+	font-size: 12pt;
+}
+.list-promoted-header span:nth-child(2),
+.list-promoted-header span:nth-child(3) {
+	font-size: 14pt;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.list-promoted-header span:nth-child(5) {
+	margin-top: 13px;
+}
+.list-promoted-header span:nth-child(5),
+.list-promoted-header span:nth-child(6) {
+	font-size: 12pt;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.list-promoted-body {
+
+}
+.list-promoted-body .row1 span,
+.list-promoted-body .row2 span,
+.list-promoted-body .row3 span:nth-child(1),
+.list-promoted-body .row3 span:nth-child(2),
+.list-promoted-body .row4 span {
+	font-family: Times New Roman;
+	font-size: 15pt;
+	font-weight: bold;
+}
+.list-promoted-body .row1 span,
+.list-promoted-body .row2 span,
+.list-promoted-body .row3 span:nth-child(1) {
+	text-transform: uppercase;
+}
+.list-promoted-body .row1 span:nth-child(2) {
+	text-decoration: underline;
+}
+.list-promoted-body table {
+	font-family: Times New Roman;
+	font-size: 12pt;
+	margin-top: 10px;
+}
+.list-promoted-body table th {
+	font-weight: normal;
+}
+.list-promoted-body table td:nth-child(1),
+.list-promoted-body table td:nth-child(3) {
+	text-align: center;
+}
+.list-promoted-body table th:nth-child(1),
+.list-promoted-body table td:nth-child(1) {
+	width: 36px;
+}
+.list-promoted-body table th:nth-child(2),
+.list-promoted-body table td:nth-child(2) {
+	width: 262.67px;
+}
+.list-promoted-body table th:nth-child(3),
+.list-promoted-body table td:nth-child(3) {
+	width: 68px;
+}
+
+@media print {
+	@page {
+		size: portrait;
+		margin: 0.4in;
+	}
+	.header,
+	.sub-navigation,
+	.list-promoted-header,
+	.paper-report,
+	.list-promoted-option {
+		display: none;
+	}
+	.main {
+		margin-top: 0;
+	}
+	.main-list-promoted {
+		margin: 0;
+		margin-top: 0;
+	}
+}

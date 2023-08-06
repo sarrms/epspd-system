@@ -1,0 +1,199 @@
+body {
+    background-color: #f0f2f5;
+}
+.main-body {
+	width: 1220px;
+	margin: auto;
+	margin-top: 69px;
+}
+.admin-header {
+    margin-bottom: 10px;
+}
+.admin-header .container {
+    display: inline-block;
+    width: 200px;
+    padding: 15px;
+    overflow: hidden;
+    margin-right: 10px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.1);
+}
+.admin-header .container:hover {
+    transition: all 1s ease;
+}
+.admin-header .container:not(:hover) {
+    transition-delay: 1s;
+    transition: all 1s ease;
+}
+.admin-header .container:hover div svg {
+    transform: scale(2);
+    transition: all 1s ease;
+}
+.admin-header .container:not(:hover) div svg {
+    transition-delay: 1s;
+    transition: all 1s ease;
+}
+.admin-header .container:nth-child(1):hover {
+    background-color: #37a5f7;
+}
+.admin-header .container:nth-child(2):hover {
+    background-color: #40d69c;
+}
+.admin-header .container:nth-child(3):hover {
+    background-color: #f88a51;
+}
+.admin-header .container:nth-child(4):hover {
+    background-color: #fb6974;
+}
+.admin-header .container:hover div:nth-child(2) div {
+    transition: all 1s ease;
+}
+.admin-header .container:not(:hover) div:nth-child(2) div {
+    transition-delay: 1s;
+    transition: all 1s ease;
+}
+.admin-header .container:hover div:nth-child(2) div:nth-child(1) {
+    color: #ffffff;
+}
+.admin-header .container:hover div:nth-child(2) div:nth-child(2) {
+    color: #f2f2f2;
+}
+.admin-header .container div {
+    display: inline-block;
+}
+.admin-header .container div svg {
+    color: #ffffff;
+    height: 30px;
+    width: 30px;
+    padding: 15px;
+    border-radius: 50%;
+}
+.admin-header .container:nth-child(1) div svg {
+    background-color: #37a5f7;
+}
+.admin-header .container:nth-child(2) div svg {
+    background-color: #40d69c;
+}
+.admin-header .container:nth-child(3) div svg {
+    background-color: #f88a51;
+}
+.admin-header .container:nth-child(4) div svg {
+    background-color: #fb6974;
+}
+.admin-header .container div:nth-child(2) div {
+    position: absolute;
+    display: block;
+    height: 30px;
+    margin-left: 20px;
+    padding-top: 5px;
+}
+.admin-header .container div:nth-child(2) div:nth-child(1) {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: -58px;
+}
+.admin-header .container div:nth-child(2) div:nth-child(2) {
+    color: #808080;
+    font-size: 14px;
+    margin-top: -25px;
+}
+.colleges-header,
+.subjects-header,
+.professors-header,
+.heads-header {
+    margin-bottom: 10px;
+    padding: 10px;
+    position: relative;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.1);
+}
+.colleges-header a,
+.subjects-header a,
+.professors-header a,
+.heads-header a {
+    color: #151515;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0 10px;
+}
+.colleges-header .active,
+.subjects-header .active,
+.professors-header .active,
+.heads-header .active {
+    color: #df2c14;
+}
+.colleges-header button,
+.subjects-header button,
+.professors-header button,
+.heads-header button {
+    cursor: pointer;
+    color: #ffffff;
+    padding: 5px 10px;
+    margin-top: -3px;
+    margin-right: 9px;
+    position: absolute;
+    right: 0;
+    border: none;
+    border-radius: 3px;
+    background-color: #34a853;
+}
+.subjects-subheader {
+    text-align: right;
+    margin-bottom: 10px;
+}
+.subjects-subheader span {
+    float: left;
+    padding: 5px 0;
+    margin-right: 8px;
+    margin-bottom: 10px;
+}
+.subjects-subheader select {
+    cursor: pointer;
+    padding: 10px;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: #ffffff;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.1);
+}
+.main-body table {
+    width: 100%;
+    border-radius: 5px;
+    border-spacing: 0;
+	background-color: #ffffff;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.1);
+}
+.main-body table th,
+.main-body table td {
+    border-bottom: 1px solid #f0f2f5;
+}
+.main-body table th {
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #f8f8f8;
+}
+.main-body table td {
+    padding: 5px;
+}
+
+.main-body table td:nth-child(1) {
+    text-align: center;
+}
+.main-body table td:last-child {
+    text-align: center;
+}
+.main-body table th button {
+    background-color: #34a853;
+}
+.main-body table button {
+    cursor: pointer;
+    color: #ffffff;
+    margin: 0 2.5px;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+}

@@ -1,0 +1,112 @@
+.paper-main-header {
+	text-align: right;
+	position: absolute;
+	right: 0;
+	width: 100%;
+	margin-top: 31px;
+}
+.list-of-graduates-table {
+	font-size: 14px;
+	width: 100%;
+	border-spacing: 0;
+	table-layout: fixed;
+	border-radius: 5px;
+	background-color: #ffffff;
+	box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.1);
+}
+.list-of-graduates-table th,
+.list-of-graduates-table td {
+	padding: 5px;
+	border-bottom: 1px solid #f0f2f5;
+}
+.list-of-graduates-table tr:nth-child(1) th {
+	text-align: left;
+}
+.list-of-graduates-table tr:nth-child(2) th {
+	background-color: #f8f8f8;
+}
+.list-of-graduates-table tr td:last-child {
+	width: 99.91px;
+	min-width: 99.91px;
+	max-width: 99.91px;
+}
+.list-of-graduates-table .select-grade {
+	cursor: pointer;
+	appearance: none;
+	display: block;
+	border: none;
+	outline: none;
+}
+.list-of-graduates-table button {
+	cursor: pointer;
+	color: #65676b;
+	display: block;
+	padding: 5px;
+	border: none;
+	background-color: transparent;
+}
+.list-of-graduates-table button:hover {
+	text-decoration: underline;
+}
+
+.paper {
+	text-align: center;
+	overflow: hidden;
+	position: relative;
+	width: 8.27in;
+	margin: auto;
+	margin-top: 10px;
+	padding: 0.4in;
+	background-color: #ffffff;
+}
+.paper table {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	text-align: left;
+	width: 100%;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+.paper table th,
+.paper table td {
+	padding: 3px;
+}
+.paper table tr:nth-child(2) th {
+	padding-bottom: 20px;
+}
+.paper table tr:nth-child(3) th:nth-child(1) {
+	text-align: center;
+	width: 50px;
+}
+.paper table tr:nth-child(3) th:nth-child(2),
+.paper table tr:nth-child(3) th:nth-child(3),
+.paper table tr:nth-child(3) th:nth-child(3) {
+	width: 160px;
+}
+.paper table td:nth-child(1) {
+	text-align: center;
+}
+
+@media print {
+	@page {
+		margin: 0.4in;
+	}
+	.header,
+	.sub-navigation,
+	.main-body-header,
+	.load-menu,
+	.paper-main-header,
+	.paper-report {
+		display: none;
+	}
+	.main {
+		width: 8.27in;
+	}
+	.paper {
+		page-break-after: always;
+		overflow: inherit;
+		margin: 0;
+		margin-top: 0;
+		padding: 0;
+	}
+}

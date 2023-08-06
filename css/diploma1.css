@@ -1,0 +1,57 @@
+.diploma .row1,
+.diploma .row5,
+.diploma .row7,
+.diploma .row9,
+.diploma .row11,
+.diploma .row13 {
+	height: 17.15pt;
+}
+.diploma .row2,
+.diploma .row6,
+.diploma .row8,
+.diploma .row10,
+.diploma .row12,
+.diploma .row14,
+.diploma .row17,
+.diploma .row23,
+.diploma .row25,
+.diploma .row27,
+.diploma .row29 {
+	height: 16pt;
+}
+.diploma .row3 {
+	height: 30pt;
+}
+.diploma .row4 {
+	height: 20.15pt;
+}
+.diploma .row6 {
+	margin-bottom: 3pt;
+}
+.diploma .row14,
+.diploma .row17 {
+	margin-bottom: 4pt;
+}
+.diploma .row15 {
+	height: 43pt;
+	margin-bottom: 4pt;
+}
+.diploma .row16 {
+	height: 18pt;
+}
+.diploma .row18 {
+	height: 25.5pt;
+}
+.diploma .row19 {
+	height: 19.5pt;
+	margin-bottom: 4pt;
+}
+.diploma .row22
+.diploma .row24,
+.diploma .row26,
+.diploma .row28 {
+	height: 18pt;
+}
+.diploma .row27 {
+	margin-bottom: 3pt;
+}

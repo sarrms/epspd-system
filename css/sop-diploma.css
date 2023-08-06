@@ -1,0 +1,78 @@
+.main-diploma {
+	width: 1220px;
+	margin: auto;
+	margin-top: 69px;
+	background-color: #ffffff;
+}
+.diploma-header {
+	margin-bottom: 10px;
+}
+.diploma-header select {
+	cursor: pointer;
+	padding: 10px;
+	border: 1px solid #dddddd;
+	outline: none;
+}
+.diploma-header button,
+.diploma-option button {
+	color: #65676b;
+	cursor: pointer;
+	font-size: 12.6px;
+	font-weight: bold;
+	margin-left: 10px;
+	border: none;
+	outline: none;
+	background-color: transparent;
+}
+.diploma-header button:hover,
+.diploma-option button:hover {
+	text-decoration: underline;
+}
+.diploma-option {
+	text-align: right;
+}
+.diploma-header span {
+	font-family: Times New Roman;
+	text-align: center;
+	display: block;
+}
+.diploma-header span:nth-child(1),
+.diploma-header span:nth-child(4) {
+	font-size: 12pt;
+}
+.diploma-header span:nth-child(2),
+.diploma-header span:nth-child(3) {
+	font-size: 14pt;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.diploma-header span:nth-child(5) {
+	margin-top: 13px;
+}
+.diploma-header span:nth-child(5),
+.diploma-header span:nth-child(6) {
+	font-size: 12pt;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+@media print {
+	@page {
+		size: landscape;
+		margin: 0.4in;
+	}
+	.header,
+	.sub-navigation,
+	.diploma-header,
+	.paper-report,
+	.diploma-option {
+		display: none;
+	}
+	.main {
+		margin-top: 0;
+	}
+	.main-diploma {
+		margin: 0;
+		margin-top: 0;
+	}
+}

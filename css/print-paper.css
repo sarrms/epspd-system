@@ -1,0 +1,27 @@
+@media print {
+	@page {
+		size: portrait;
+		size: 210mm 297mm;
+		margin: 0;
+	}
+	.header,
+	.sub-navigation,
+	.search-menu {
+		display: none;
+	}
+	.main-body {
+		margin-left: 0;
+	}
+	.paper {
+		margin-top: 0;
+		padding-top: 0;
+		border-top: 1px solid red;
+		border-bottom: 1px solid red;
+	}
+	.e-signature-checkbox {
+		display: none;
+	}
+	.evaluator label {
+		display: none;
+	}
+}
